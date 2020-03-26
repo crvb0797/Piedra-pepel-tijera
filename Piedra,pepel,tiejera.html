@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch</title>
+    <style>
+        h1{
+            font-size: 30px;
+            color: #238CBA;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <h1>Aprendiendo a usar Switch en Javascript</h1>
+    <script>
+        let opciones = ["piedra", "papel", "tijera"];
+        let opcion_usuario = prompt("piedra, papel o tijera");
+        let opcion_sistema = Math.floor(Math.random() *3);
+        let resultados = opcion_usuario + " y la del sistema fue: " + opciones[opcion_sistema];
+
+        switch (opcion_usuario){
+            case "piedra":
+                if(opcion_sistema === 0){
+                    alert("Empate, tu opcion fue: " + resultados)
+                } else if (opcion_sistema === 1){
+                    alert("Perdiste tu opcion fue: " + resultados)
+                } else if (opcion_sistema === 2){
+                    alert("Ganaste!! tu opcion fue: " + resultados)
+                }
+            break;
+            case "papel":
+                if(opcion_sistema === 0){
+                    alert("Ganaste!! tu opcion fue: " + resultados)
+                } else if (opcion_sistema === 1){
+                    alert("Empate tu opcion fue: " + resultados)
+                } else if (opcion_sistema === 2){
+                    alert("Perdiste tu opcion fue: " + resultados)
+                }
+            break;
+            case "tijera":
+                if(opcion_sistema === 0){
+                    alert("Perdiste tu opcion fue: " + resultados)
+                } else if (opcion_sistema === 1){
+                    alert("Ganaste!! tu opcion fue: " + resultados)
+                } else if (opcion_sistema === 2){
+                    alert("Empate tu opcion fue: " + resultados)
+                }
+            break; 
+            default:
+                alert("Ingresaste una opcion invalida")
+        }   
+            
+    </script>
+</body>
+</html>
